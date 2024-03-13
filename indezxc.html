@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="script.js" defer></script>
+
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <button id="confettiButton">Shoot Confetti</button> -->
+        <script>
+            $(document).ready(function() {
+            const defaults = {
+                spread: 360,
+                ticks: 50,
+                gravity: 0,
+                decay: 0.94,
+                startVelocity: 20,
+                shapes: ["star"],
+                colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+            };
+            
+            function shoot() {
+                confetti({
+                ...defaults,
+                particleCount: 40,
+                scalar: 1.2,
+                shapes: ["star"],
+                });
+            
+                confetti({
+                ...defaults,
+                particleCount: 50,
+                scalar: 0.75,
+                shapes: ["circle"],
+                });
+            }
+            $("#confettiButton").click(function() {
+                shoot();
+            });
+            });
+            </script>
+
+        <div class="Win-outcome">
+            <a class="btn_outcome_lose " id="confettiButton" href="javascript:void()">Pindutin</a>
+            <div class="YOU_LOSE">
+                <div class="el ang-a_LOSE animated d-none"
+                    data-in="zoomOut"></div>
+                <div class="el ang-b_LOSE animated d-none"
+                    data-in="zoomOut"></div>
+                <div class="el glow_lose animated d-none"
+                    data-in="fadeIn"></div>
+                <div class="el bg_lose bg-1_lose animated d-none"
+                    data-in="fadeIn" data-out="zoomOut"></div>
+                <div class="el dots_LOSE animated d-none"> <i></i> <i></i>
+                    <i></i>
+                    <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                    <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                    <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                    <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                    <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                    <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                    <i></i> <i></i> <i></i> <i></i> <i></i></div>
+                <div class="el bg_lose bg-2_lose animated d-none"
+                    data-in="zoomIn" data-out="bounceOut"></div>
+                <div class="el ang-c_LOSE animated d-none"
+                    data-in="zoomOut"></div>
+                <div class="el shine_LOSE animated d-none"
+                    data-in="shine_LOSE_In"
+                    data-out="fadeOut"></div>
+                <div class="el text_LOSE animated d-none" data-in="zoomOutIn"
+                    data-out="zoomOutRight">YOU LOSE!</div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
