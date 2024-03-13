@@ -17,21 +17,23 @@
         <script>
             $(document).ready(function() {
             const defaults = {
-                spread: 360,
-                ticks: 50,
+                spread: 90,
+                ticks: 10,
                 gravity: 0,
                 decay: 0.94,
                 startVelocity: 20,
-                shapes: ["star"],
+                decay: 0.94,
+                shapes: ["star", "circle"],
                 colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
             };
             
             function shoot() {
                 confetti({
                 ...defaults,
-                particleCount: 40,
+                particleCount: 100,
                 scalar: 1.2,
                 shapes: ["star"],
+                decay: 0.94,
                 });
             
                 confetti({
@@ -39,16 +41,57 @@
                 particleCount: 50,
                 scalar: 0.75,
                 shapes: ["circle"],
+                decay: 0.94,
                 });
+                confetti({
+                    spread: 70,
+                    ticks: 10,
+                    gravity: 0,
+                    decay: 0.94,
+                    startVelocity: 10,
+                    particleCount: 10,
+                    scalar: 2.7,
+                    shapes: ["image"],
+                    shapeOptions: {
+                        image: [{
+                            src: "https://cdn.29bet.com/assets/img/all/pages/games/coin-red.webp",
+                            width: 32,
+                            height: 32,
+                        },
+
+                        ],
+                    },
+                    });
+                    confetti({
+                    spread: 70,
+                    ticks: 10,
+                    gravity: 0,
+                    decay: 0.94,
+                    startVelocity: 10,
+                    particleCount: 10,
+                    scalar: 2.7,
+                    shapes: ["image"],
+                    shapeOptions: {
+                        image: [{
+                            src: "https://cdn.29bet.com/assets/img/all/pages/games/coin-black.webp",
+                            width: 32,
+                            height: 32,
+                        },
+
+                        ],
+                    },
+                    });
             }
             $("#confettiButton").click(function() {
                 shoot();
             });
             });
             </script>
-
+        <!-- pang trigger -->
+        <!-- id="confettiButton" -->
+        <button id="confettiButton">asjdghakhgs</button>
         <div class="Win-outcome">
-            <a class="btn_outcome_lose " id="confettiButton" href="javascript:void()">Pindutin</a>
+            <a class="btn_outcome_lose " href="javascript:void()">Pindutin</a>
             <div class="YOU_LOSE">
                 <div class="el ang-a_LOSE animated d-none"
                     data-in="zoomOut"></div>
