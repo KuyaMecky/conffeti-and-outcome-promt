@@ -2336,7 +2336,7 @@ body {
   position: absolute;
   left: -10%;
   right: 30%;
-  top: 5%;
+  top: 10%;
   transform: translate(-50% 50%);
 }
 #text-ext {
@@ -2651,7 +2651,7 @@ body {
 	position: absolute;
 	left: -13%;
 	right: 30%;
-	top: 0;
+	top: 5%;
 	transform: translate(-50% 50%);
   }
   #text-ext-stairs {
@@ -3594,7 +3594,7 @@ body {
 	position: absolute;
 	left: -19%;
 	right: 30%;
-	top: 25%;
+	top: 27%;
 	transform: translate(-50% 50%);
   }
   #text-ext-roulette {
